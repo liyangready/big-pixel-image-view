@@ -61,15 +61,15 @@ clone本项目直接运行index.html有一个类似的demo。
 + 依赖jquery，所以需要引入jquery
 + 引入bigPiexlImageView.js
 + 使用： 
-+ <pre>
-+ var imgPathArray = [];
+<pre>
+var imgPathArray = [];
 	for (var i = 0; i <= 4; i++) {
 	  imgPathArray[i] = [];
 	  for (var j = 0; j <= 4; j++) {
 		imgPathArray[i][j] = "./imgs/1/" + i + "_" + j + ".png";
 	  }
 	}
-+ var bp = new BigPixelImageView({
+var bp = new BigPixelImageView({
 		"canvasId": "mycanvas", //canvas dom元素的id 必选
 		"blockWidth": 400, //你准备的小图块的宽度 必选
 		"blockHeight": 300, //你准备的小图块的高度 必选
@@ -79,7 +79,7 @@ clone本项目直接运行index.html有一个类似的demo。
   });
   bp.init(0, 0); //初始化坐标，可以修改成任意你想绘制的位置
   bp.bindEvent(); //绑定鼠标事件，现在只支持拖拽
-+ </pre>
+</pre>
 + 从上面的实例中可以看出来，你需要一个图片集合，它可以拼接成一张大图片，它应该是是一个二维矩阵。当然，如果需要带zoom in zoom out功能，就需要提供一个金字塔形的图片库，将是一个三维矩阵，比如我的《清明上河图》项目里面的图片。
 
 ## 坐标系
