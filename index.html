@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>big-piexl-imgae-view</title>
+	<style type="text/css">
+		#mycanvas{
+			position: absolute;
+			width: 800px;
+			height: 500px;
+			top: 50%;
+			left: 50%;
+			margin-top: -250px;
+			margin-left: -400px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="mycanvas"></canvas>
+	<script type="text/javascript" src="./src/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="./src/bigPixelImageView.js"></script>
+	<script type="text/javascript">
+		var imgPathArray = [];
+		for (var i = 0; i <= 4; i++) {
+			imgPathArray[i] = [];
+			for (var j = 0; j <= 4; j++) {
+				imgPathArray[i][j] = "./imgs/1/" + i + "_" + j + ".png";
+			}
+		}
+		var bp = new BigPixelImageView({
+			"canvasId": "mycanvas",
+			"blockWidth": 400,
+			"blockHeight": 300,
+			"blockRowNum": 2,
+			"blockColNum": 5,
+			"imgPathArray": imgPathArray
+		});
+		bp.init(0, 0);
+		bp.bindEvent();
+
+	</script>
+</body>
+</html>
