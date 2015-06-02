@@ -9,7 +9,7 @@
 
 ##成果
 
-[故宫名画记在线展示](http://minghuaji.dpm.org.cn/content/qingming/index.html)
+[故宫名画记在线展示](http://minghuaji.dpm.org.cn/index.html)
 
 已经上线，其中清明上河图和韩熙载都使用了这种技术。
 
